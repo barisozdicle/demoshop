@@ -1,11 +1,6 @@
 from behave import *
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from datetime import datetime
 from selenium.webdriver.common.keys import Keys
-
+import time
 
 @given("i create a url <{url}>")
 def step_impl(context, url):
@@ -44,6 +39,7 @@ def step_impl(context):
 
 @step("i assert cart has <{item_count}>")
 def step_impl(context, item_count):
+    time.sleep(1)
     cart = context.driver.find_element_by_id('cart-total')
     assert item_count in cart.text
 
