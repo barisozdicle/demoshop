@@ -5,6 +5,7 @@ go /demoshop directory and run "./run.sh"
 or 
 
 docker build . -t demoshop
+
 docker run demoshop
 
 # Headless
